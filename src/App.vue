@@ -4,6 +4,7 @@
 
 <script lang="ts">
 import { ref, provide } from "vue";
+import { router } from "./router";
 export default {
   name: "App",
   setup() {
@@ -12,6 +13,13 @@ export default {
     const menuVisible = ref(width <= 500 ? false : true);
 
     provide("menuVisible", menuVisible); // set
+
+    // 路由切换时
+    router.afterEach(() => {
+      if (width <= 500) {
+        menuVisible.value = false;
+      }
+    });
   },
 };
 </script>
