@@ -1,9 +1,14 @@
 <template>
   <div class="top_nav">
-    <div class="logo">LOGO</div>
+    <div class="logo">
+      <svg class="icon"
+           aria-hidden="true">
+        <use xlink:href="#icon-nanhai"></use>
+      </svg>
+    </div>
     <ul class="menu">
-      <li>菜单1</li>
-      <li>菜单2</li>
+      <li><a href="https://github.com/2013888096">Github</a></li>
+      <li><a href="javascript:;">Blog</a></li>
     </ul>
     <span class="toggleAside"
           @click="toggleAside">
@@ -40,7 +45,7 @@ $textColor: #05538c;
   width: 100%;
   color: $textColor;
   display: flex;
-  padding: 14px;
+  padding: 4px 12px;
   justify-content: center;
   align-items: center;
   z-index: 20;
@@ -52,8 +57,8 @@ $textColor: #05538c;
     max-width: 6em;
     margin-right: auto;
     svg {
-      width: 38px;
-      height: 38px;
+      width: 60px;
+      height: 60px;
     }
   }
   .menu {

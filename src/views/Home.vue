@@ -12,7 +12,7 @@
         <ul>
           <li>
             <svg class="icon">
-              <use xlink:href="#icon-vue"></use>
+              <use xlink:href="#icon-vue1-blue"></use>
             </svg>
             <h3>基于 Vue 3</h3>
             <p>使用了 Vue 3 Composition API</p>
@@ -26,7 +26,7 @@
           </li>
           <li>
             <svg class="icon">
-              <use xlink:href="#icon-led"></use>
+              <use xlink:href="#icon-LC_icon_light_line"></use>
             </svg>
             <h3>代码易读</h3>
             <p>每个组件的源代码都极其简洁</p>
@@ -37,7 +37,7 @@
   </div>
 </template>
 <script lang="ts">
-import Topnav from "../components/Topnav.vue";
+import Topnav from "../codeDemo/Topnav.vue";
 export default {
   components: { Topnav },
 };
@@ -55,7 +55,7 @@ $textColor: #05538c;
     }
   }
   .banner {
-    padding: 180px 0 150px;
+    padding: 130px 0 30px;
     color: $textColor;
     background: rgb(174, 209, 228);
     background: linear-gradient(
@@ -63,6 +63,7 @@ $textColor: #05538c;
       rgba(174, 209, 228, 1) 0%,
       rgba(66, 125, 169, 1) 100%
     );
+    // 画弧
     clip-path: ellipse(80% 60% at 50% 40%);
     margin: 0 auto;
     h1 {
@@ -89,6 +90,7 @@ $textColor: #05538c;
         color: #fff;
         border-radius: 6px;
         border: none;
+        text-decoration: none;
       }
     }
   }

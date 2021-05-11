@@ -24,6 +24,9 @@
           <li>
             <router-link to="/doc/tabs">Tabs 组件</router-link>
           </li>
+          <li>
+            <router-link to="/doc/expect">更新计划</router-link>
+          </li>
         </ol>
       </aside>
       <main>
@@ -33,7 +36,7 @@
   </div>
 </template>
 <script lang="ts">
-import Topnav from "../components/Topnav.vue";
+import Topnav from "../codeDemo/Topnav.vue";
 import { inject, Ref } from "vue";
 export default {
   components: { Topnav },
@@ -90,6 +93,7 @@ export default {
           > a {
             display: block;
             padding: 12px 20px;
+            text-decoration: none;
             cursor: pointer;
             color: #333;
             &:hover {
