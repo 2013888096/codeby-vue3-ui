@@ -2,15 +2,14 @@ import { createWebHashHistory, createRouter } from 'vue-router'
 
 import Home from '../views/Home.vue'
 import Doc from '../views/Doc.vue'
-import SwitchDemo from '../codeDemo/SwitchDemo.vue'
-import ButtonDemo from '../codeDemo/ButtonDemo.vue'
-import DialogDemo from '../codeDemo/DialogDemo.vue'
-import TabsDemo from '../codeDemo/TabsDemo.vue'
+import SwitchDemo from '../components/DocUi/SwitchDemo.vue'
+import ButtonDemo from '../components/DocUi/ButtonDemo.vue'
+import DialogDemo from '../components/DocUi/DialogDemo1.vue'
+import TabsDemo from '../components/DocUi/TabsDemo.vue'
 import Expect from '../codeDemo/Expect.vue'
 import docdemo from '../docDemo/docdemo.vue'
 
-
-import Markdown from '../codeDemo/Markdown.vue';
+import Markdown from '../components/Markdown.vue';
 import { h } from 'vue';
 
 const history = createWebHashHistory();

@@ -42,7 +42,7 @@
   </div>
 </template>
 <script lang="ts">
-import Topnav from "../codeDemo/Topnav.vue";
+import Topnav from "../components/Topnav.vue";
 import { inject, Ref } from "vue";
 export default {
   components: { Topnav },

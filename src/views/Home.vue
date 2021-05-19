@@ -37,7 +37,7 @@
   </div>
 </template>
 <script lang="ts">
-import Topnav from "../codeDemo/Topnav.vue";
+import Topnav from "../components/Topnav.vue";
 export default {
   components: { Topnav },
 };

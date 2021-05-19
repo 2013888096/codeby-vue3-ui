@@ -5,8 +5,8 @@
           @click="showDialog">一键打开Dialog</Button>
 </template>
 <script lang="ts">
-import Button from "../lib/Button.vue";
-import { openDialog } from "../lib/openDialog";
+import Button from "../../lib/Button.vue";
+import { openDialog } from "../../lib/openDialog";
 export default {
   name: "DialogDemo2",
   components: {

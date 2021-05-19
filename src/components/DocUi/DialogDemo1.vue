@@ -23,9 +23,9 @@
           @click="showDialog">一键打开Dialog</Button>
 </template>
 <script lang="ts">
-import Dialog from "../lib/Dialog.vue";
-import Button from "../lib/Button.vue";
-import { openDialog } from "../lib/openDialog";
+import Dialog from "../../lib/Dialog.vue";
+import Button from "../../lib/Button.vue";
+import { openDialog } from "../../lib/openDialog";
 import { ref } from "vue";
 
 export default {
