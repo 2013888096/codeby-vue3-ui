@@ -1,25 +1,33 @@
 <template>
-  <div>Tabs 示例</div>
-  <h1>示例1</h1>
-  <Tabs v-model:selected="title">
-    <Tab title="学习">学习</Tab>
-    <Tab title="睡觉">睡觉</Tab>
-    <Tab title="吃饭">吃饭</Tab>
-  </Tabs>
-
+  <doc-title>Tabs 标签栏示例</doc-title>
+  <CodePer :component="TabsDemo" />
+  <Attr :columns="columns"
+        :data="data" />
 </template>
 <script lang="ts">
-import Tabs from "../../lib/Tabs.vue";
-import Tab from "../../lib/Tab.vue";
+import TabsDemo from "../../codeDemo/TabsCode/TabsCode.vue";
+
+import "prismjs";
+import "../../assets/style/prism.css";
+import CodePer from "../Codeper.vue";
+import DocTitle from "../DocTitle.vue";
+import Attr from "../Attrs.vue";
 import { ref } from "vue";
+import { columns } from "../../lib/data";
 export default {
-  components: {
-    Tabs,
-    Tab,
-  },
-  setup(props, context) {
-    const title = ref("学习");
-    return { title };
+  name: "TabsDemo",
+  components: { CodePer, DocTitle, Attr },
+  setup() {
+    const data = ref([
+      {
+        params: "tab-item",
+        desc: "tab页签",
+        type: "component",
+        select: "tab-item",
+        default: "--",
+      },
+    ]);
+    return { TabsDemo, data, columns };
   },
 };
 </script>

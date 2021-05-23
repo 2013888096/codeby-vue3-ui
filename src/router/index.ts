@@ -4,23 +4,28 @@ import Home from '../views/Home.vue'
 import Doc from '../views/Doc.vue'
 import SwitchDemo from '../components/DocUi/SwitchDemo.vue'
 import ButtonDemo from '../components/DocUi/ButtonDemo.vue'
-import DialogDemo from '../components/DocUi/DialogDemo1.vue'
+import DialogDemo from '../components/DocUi/DialogDemo.vue'
 import TabsDemo from '../components/DocUi/TabsDemo.vue'
 import Expect from '../codeDemo/Expect.vue'
-import docdemo from '../docDemo/docdemo.vue'
+
 
 import Markdown from '../components/Markdown.vue';
 import { h } from 'vue';
 
-const history = createWebHashHistory();
+
 // 封装h函数
 const md = path => h(Markdown, { path, key: path })
-
+// const md = string => h(Markdown, { content: string, key: string })
+const history = createWebHashHistory();
 export const router = createRouter({
-    history: history,
+    history,
     routes: [
         {
             path: '/',
+            redirect: '/home'
+        },
+        {
+            path: '/home',
             component: Home
         },
         {
@@ -29,7 +34,7 @@ export const router = createRouter({
             children: [
                 {
                     path: '',
-                    component: docdemo
+                    redirect: '/doc/intro'
                 }
                 ,
                 {

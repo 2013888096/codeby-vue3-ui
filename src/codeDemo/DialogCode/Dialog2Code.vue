@@ -1,5 +1,6 @@
+<demo>函数式调用对话框</demo>
 <template>
-  <h1>函数式调用对话框</h1>
+  <h1></h1>
   <Button theme="primary"
           size="small"
           @click="showDialog">一键打开Dialog</Button>
@@ -7,8 +8,9 @@
 <script lang="ts">
 import Button from "../../lib/Button.vue";
 import { openDialog } from "../../lib/openDialog";
+
 export default {
-  name: "DialogDemo2",
+  name: "DialogDemo1",
   components: {
     Button,
   },
@@ -28,7 +30,6 @@ export default {
         },
       });
     };
-
     return {
       showDialog,
     };

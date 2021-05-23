@@ -5,7 +5,7 @@ import App from './App.vue'
 import './lib/_c.scss'
 import './index.scss'
 import './lib/svg'
-import Markdown from './codeDemo/Markdown.vue';
+import Markdown from './components/Markdown.vue';
 const app = createApp(App)
 app.use(router)
 app.mount('#app')

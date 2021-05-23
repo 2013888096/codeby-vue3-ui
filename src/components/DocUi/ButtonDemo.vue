@@ -1,40 +1,62 @@
 <template>
-  <div>Button 示例</div>
-  <h1>基础用法</h1>
-  <div>
-    <Button>默认按钮</Button>
-    <Button theme="primary">主要按钮</Button>
-    <Button theme="warning">警告按钮</Button>
-    <Button theme="success">成功按钮</Button>
-    <Button theme="danger">危险按钮</Button>
-    <Button theme="info">信息按钮</Button>
-    <Button theme="link">链接按钮</Button>
-  </div>
-  <h1>尺寸大小</h1>
-  <div>
-    <Button size="small">超小按钮</Button>
-    <Button size="normal">正常按钮</Button>
-    <Button size="large">大型按钮</Button>
-  </div>
-  <h1>加载效果</h1>
-  <div>
-    <Button loading>加载中</Button>
-  </div>
+  <doc-title>Button 示例</doc-title>
+  <CodePer :component="Button1Demo" />
+  <CodePer :component="Button2Demo" />
+  <CodePer :component="Button3Demo" />
+  <Attr :columns="columns"
+        :data="data" />
 </template>
 <script lang="ts">
-import Button from "../../lib/Button.vue";
+import Button1Demo from "../../codeDemo/ButtonCode/Button1Code.vue";
+import Button2Demo from "../../codeDemo/ButtonCode/Button2Code.vue";
+import Button3Demo from "../../codeDemo/ButtonCode/Button3Code.vue";
+
+import "prismjs";
+import "../../assets/style/prism.css";
+import CodePer from "../Codeper.vue";
+import DocTitle from "../DocTitle.vue";
+import Attr from "../Attrs.vue";
+import { columns } from "../../lib/data";
+import { ref } from "vue";
 export default {
   components: {
-    Button: Button,
+    CodePer,
+    DocTitle,
+    Attr,
   },
   setup() {
-    const onClick = () => {
-      console.log("hi,小白同学");
-    };
-
+    const data = ref([
+      {
+        params: "theme",
+        desc: "按钮颜色",
+        type: "string",
+        select: "primary / warning / success / danger / info / link",
+        default: "default",
+      },
+      {
+        params: "size",
+        desc: "尺寸大小",
+        type: "string",
+        select: "small / normal / large",
+        default: "normal",
+      },
+      {
+        params: "loading",
+        desc: "是否加载",
+        type: "boolean",
+        select: "false / true",
+        default: "false",
+      },
+    ]);
     return {
-      onClick,
+      Button1Demo,
+      Button2Demo,
+      Button3Demo,
+      columns,
+      data,
     };
   },
 };
 </script>
+<style lang="scss">
+</style>
