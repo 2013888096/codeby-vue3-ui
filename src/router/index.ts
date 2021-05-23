@@ -7,15 +7,17 @@ import ButtonDemo from '../components/DocUi/ButtonDemo.vue'
 import DialogDemo from '../components/DocUi/DialogDemo.vue'
 import TabsDemo from '../components/DocUi/TabsDemo.vue'
 import Expect from '../codeDemo/Expect.vue'
-
+import intro from '../markdown/intro.md';
+import getStarted from '../markdown/getStarted.md';
+import install from '../markdown/install.md';
 
 import Markdown from '../components/Markdown.vue';
 import { h } from 'vue';
 
 
 // 封装h函数
-const md = path => h(Markdown, { path, key: path })
-// const md = string => h(Markdown, { content: string, key: string })
+// const md = path => h(Markdown, { path, key: path })
+const md = string => h(Markdown, { content: string, key: string })
 const history = createWebHashHistory();
 export const router = createRouter({
     history,
@@ -39,15 +41,15 @@ export const router = createRouter({
                 ,
                 {
                     path: 'get-started',
-                    component: md('../markdown/getStarted.md')
+                    component: md(getStarted)
                 },
                 {
                     path: 'install',
-                    component: md('../markdown/install.md')
+                    component: md(install)
                 },
                 {
                     path: 'intro',
-                    component: md('../markdown/intro.md')
+                    component: md(intro)
                 },
                 {
                     path: 'switch',
