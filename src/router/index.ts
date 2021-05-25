@@ -1,12 +1,14 @@
-import { createWebHashHistory, createRouter } from 'vue-router'
+import { createWebHashHistory, createRouter } from 'vue-router';
 
-import Home from '../views/Home.vue'
-import Doc from '../views/Doc.vue'
-import SwitchDemo from '../components/DocUi/SwitchDemo.vue'
-import ButtonDemo from '../components/DocUi/ButtonDemo.vue'
-import DialogDemo from '../components/DocUi/DialogDemo.vue'
-import TabsDemo from '../components/DocUi/TabsDemo.vue'
-import Expect from '../codeDemo/Expect.vue'
+import Home from '../views/Home.vue';
+import Doc from '../views/Doc.vue';
+import SwitchDemo from '../components/DocUi/SwitchDemo.vue';
+import ButtonDemo from '../components/DocUi/ButtonDemo.vue';
+import DialogDemo from '../components/DocUi/DialogDemo.vue';
+import TabsDemo from '../components/DocUi/TabsDemo.vue';
+import UploadDemo from '../components/DocUi/UploadDemo.vue';
+
+import Expect from '../codeDemo/Expect.vue';
 import intro from '../markdown/intro.md';
 import getStarted from '../markdown/getStarted.md';
 import install from '../markdown/install.md';
@@ -66,6 +68,10 @@ export const router = createRouter({
                 {
                     path: 'tabs',
                     component: TabsDemo
+                },
+                {
+                    path: 'imageUpload',
+                    component: UploadDemo
                 },
                 {
                     path: 'expect',

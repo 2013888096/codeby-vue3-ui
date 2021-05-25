@@ -31,6 +31,9 @@
             <router-link to="/doc/tabs">Tabs 组件</router-link>
           </li>
           <li>
+            <router-link to="/doc/imageUpload">Upload 组件</router-link>
+          </li>
+          <li>
             <router-link to="/doc/expect">更新计划</router-link>
           </li>
         </ol>
