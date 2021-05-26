@@ -23,11 +23,26 @@ export default {
   setup() {
     const data = ref([
       {
-        params: "value",
-        desc: "是否选中",
+        params: "isCompress",
+        desc: "是否压缩",
         type: "boolean",
-        select: "false / true",
-        default: "false",
+        select: "true / false",
+        default: "true",
+      },
+      {
+        params: "imageBase64Result",
+        desc: "处理后的图片base64编码",
+        type: "string",
+        select: "null",
+        default: "normal",
+      },
+      ,
+      {
+        params: "maxsize_str",
+        desc: "允许上传最大限制",
+        type: "string",
+        select: "1MB",
+        default: "1MB",
       },
     ]);
     return {
